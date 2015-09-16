@@ -39,5 +39,20 @@ def array_down(array)
 	puts array2
 end
 
-array_down(["HELLO", "Hi"])
+def file_array(filen)
+	file = File.open(filen, 'r')
+	file.each_line do |line|
+		array = line.split(",")
+		average = 0
+		(1...array.length).each do |n|
+			average += array[n].to_i
+		end
+		average /= array.length - 1
+		puts "#{array[0]}s score was #{average}"
+	end
+end
+
+#array_down(["HELLO", "Hi"])
+
+file_array("Thing.csv")
 
