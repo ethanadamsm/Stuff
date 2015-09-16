@@ -34,6 +34,10 @@ def modify_array2(array, num)
 	puts array2
 end
 
-modify_array2([2, 4, 5, 2, 5, 4], 2)
+def array_down(array)
+	array2 = array.map { |word| word.downcase }
+	puts array2
+end
 
+array_down(["HELLO", "Hi"])
 
